@@ -72,11 +72,11 @@ public class MidgardCharGen extends JFrame {
         backgroundPanel.setPreferredSize(new java.awt.Dimension(880, 500));
 
         jComboBox1.setMaximumRowCount(50);
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "Ausw‰hlen" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "Ausw√§hlen" }));
         jComboBox1.removeAllItems();
 
         try {
-            final InputStream inputStream = getClass().getResourceAsStream("../textfiles/groups.txt");
+            final InputStream inputStream = getClass().getResourceAsStream("/resources/textfiles/groups.txt");
             final InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
             final BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             //final List<String> list = new ArrayList<String>();
@@ -97,7 +97,7 @@ public class MidgardCharGen extends JFrame {
 
         jLabel2.setText("Abenteuertyp");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "Ausw‰hlen" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "Ausw√§hlen" }));
 
         javax.swing.GroupLayout backgroundPanelLayout = new javax.swing.GroupLayout(backgroundPanel);
         backgroundPanel.setLayout(backgroundPanelLayout);
@@ -181,8 +181,9 @@ public class MidgardCharGen extends JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {                                  
         // TODO add your handling code here:
+
         try {
-            image = ImageIO.read(getClass().getResource("../images/background.jpg"));
+            image = ImageIO.read(getClass().getResource("/resources/images/background.jpg"));
         }catch(IOException e) {
             e.printStackTrace();
         }   
@@ -195,7 +196,7 @@ public class MidgardCharGen extends JFrame {
         jComboBox2.removeAllItems();
         
         try {
-            String filepath = "../textfiles/types_" + jComboBox1.getSelectedIndex() + ".txt";
+            String filepath = "/resources/textfiles/types_" + jComboBox1.getSelectedIndex() + ".txt";
             
             //System.out.println(filepath);
             
